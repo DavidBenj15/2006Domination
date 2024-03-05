@@ -155,7 +155,7 @@ def select_start_time(bot, driver):
         except TimeoutException:
             print(f"Error: timed out trying to click time slot box for Bot {bot.bot_number}, Time {time_obj}")
             if time_obj == latest_time:
-                print(f"Bot {bot.bot_number} has reached the end of the day; resetting search at start_time 7:30am.")
+                print(f"Bot {bot.bot_number} has reached the end of the day; resetting search at start_time 10:00am.")
                 time_obj = time_obj.replace(hour=10, minute=0) # reset time to 10:00 am; start scanning again.
             else:
                 time_obj = time_obj + timedelta(minutes=30) # add 30 min to time
