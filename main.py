@@ -64,8 +64,8 @@ def run_tasks(bot_number, email, password, start_time, target_date):
     driver.get(ROOM_LINK)
     driver.maximize_window()
     try:
-        if bot_number == 6 or bot_number == 8:
-            time.sleep(10) # this is our "cleanup bot" that will select stray times after other bots are done.
+        if bot_number >= 7:
+            time.sleep(10) # these are our "cleanup bots" that will wait select stray times after other bots have completed their tasks.
         close_popup(bot, driver)
         if next_button(bot, driver):
             if select_start_time(bot, driver):
