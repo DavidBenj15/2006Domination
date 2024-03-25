@@ -17,7 +17,7 @@ def main():
     init_timeslots_table()
     init_bots_table()
     config = configparser.ConfigParser()
-    config.read('config2.ini')
+    config.read('config.ini')
 
     processes = []
 
